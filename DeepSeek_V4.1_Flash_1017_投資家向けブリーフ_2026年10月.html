@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DeepSeek｜投資家向けブリーフ v3</title>
+<style>
+:root{--bg:#eeefeb;--paper:#fafaf8;--ink:#242b28;--muted:#5d6963;--line:#d0d7d1;--soft:#e9ede9;--accent:#246e64}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;background:var(--bg);color:var(--ink);font-family:Inter,"Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+body{display:grid;place-items:center;overflow:hidden}
+.stage{position:absolute;width:1280px;height:720px;transform-origin:center;box-shadow:0 15px 40px rgba(33,45,39,.07);background:var(--paper)}
+.slide{width:100%;height:100%;padding:52px 64px 48px;display:none;flex-direction:column;background:var(--paper)}.slide.active{display:flex}
+h1,p{margin:0}.accent{color:var(--accent)}
+.eyebrow{font-size:24px;font-weight:700;color:var(--muted);margin-bottom:10px}
+h1{font-size:56px;font-weight:800;line-height:1.18;letter-spacing:-.05em;margin-bottom:34px}
+/* 主張カード */
+.cards{display:grid;gap:22px;flex:1;min-height:0}.cards.c3{grid-template-columns:repeat(3,minmax(0,1fr))}.cards.c2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.card{border:1.5px solid var(--line);border-top:6px solid var(--accent);padding:28px 30px;display:flex;flex-direction:column;justify-content:center;gap:16px;min-width:0}
+.card .k{font-size:24px;font-weight:700;color:var(--muted)}
+.card .big{font-size:52px;font-weight:800;line-height:1.1;letter-spacing:-.05em;color:var(--accent)}
+.card .sub{font-size:27px;line-height:1.4;font-weight:600}
+.thesis{margin-top:22px;background:var(--soft);border-left:6px solid var(--accent);padding:20px 28px;font-size:30px;font-weight:750;line-height:1.4;letter-spacing:-.03em}
+.thesis.cost{display:grid;grid-template-columns:1fr auto;align-items:center;gap:28px;padding:18px 28px}.cost-flow{display:flex;align-items:center;gap:20px}.cost-flow .ck{font-size:19px;font-weight:700;color:var(--muted)}.cost-flow .cv{font-size:36px;font-weight:800;line-height:1.15;letter-spacing:-.04em}.cost-flow .cp{font-size:21px;font-weight:650;white-space:nowrap}.cost-flow .arrow{font-size:40px;color:var(--muted)}
+.closing{flex:1;display:flex;flex-direction:column;justify-content:center;gap:36px;padding-bottom:40px}.closing p{font-size:52px;font-weight:800;line-height:1.35;letter-spacing:-.045em}
+/* controls / sources */
+.controls{position:fixed;left:50%;bottom:9px;transform:translateX(-50%);z-index:10;display:flex;align-items:center;gap:11px;color:var(--muted);font-size:16px}.controls button{font:inherit;background:var(--paper);border:1px solid var(--line);border-radius:5px;color:var(--ink);cursor:pointer;padding:8px 14px}.controls button:hover{background:var(--soft)}.controls .counter{font-variant-numeric:tabular-nums;min-width:46px;text-align:center}
+.sources{position:fixed;right:18px;bottom:62px;z-index:11;background:var(--paper);border:1px solid var(--line);box-shadow:0 10px 45px rgba(0,0,0,.12);width:min(720px,calc(100vw - 32px));max-height:78vh;overflow:auto;padding:27px 33px;display:none;font-size:18px;line-height:1.5}.sources.open{display:block}.sources h2{font-size:26px;margin:0 0 10px}.sources a{color:#286a61;text-underline-offset:3px;overflow-wrap:anywhere}.sources p{margin:10px 0}.sources .head{font-weight:770;font-size:20px;margin-top:16px}
+@media print{html,body{height:auto;overflow:visible;display:block;background:white}.stage{position:static!important;transform:none!important;width:1280px;height:auto;box-shadow:none}.slide,.slide.active{display:flex;break-after:page;page-break-after:always;height:720px}.controls,.sources{display:none!important}@page{size:1280px 720px;margin:0}}
+</style>
+</head>
+<body>
+<main class="stage" id="stage">
+
+<section class="slide active" aria-label="1ページ目 何が出たか">
+  <div class="eyebrow">2026年10月17日公開｜DeepSeek V4.1 Flash 1017</div>
+  <h1>トップ級に迫る性能を、<span class="accent">10分の1以下の価格</span>で</h1>
+  <div class="cards c3">
+    <div class="card"><div class="k">性能</div><div class="big">Opus 5に<br>迫る</div><div class="sub">前世代のトップモデルと<br>Agent性能で競る</div></div>
+    <div class="card"><div class="k">価格</div><div class="big">1/13〜1/17</div><div class="sub">最新Opus 5.5比<br>（API利用料）</div></div>
+    <div class="card"><div class="k">公開</div><div class="big">オープン<br>ウェイト</div><div class="sub">誰でも入手でき、<br>自社でも動かせる</div></div>
+  </div>
+</section>
+
+<section class="slide" aria-label="2ページ目 3つの経路で広がりうる">
+  <div class="eyebrow">使われ方</div>
+  <h1>Agentの中身として、<span class="accent">3つの経路</span>で広がりうる</h1>
+  <div class="cards c3">
+    <div class="card"><div class="k">経路 1</div><div class="big">Agent製品</div><div class="sub">Tencent等の<br>製品に組み込まれる</div></div>
+    <div class="card"><div class="k">経路 2</div><div class="big">既存の<br>開発ツール</div><div class="sub">Claude&nbsp;Code・<br>Codexの裏で動く</div></div>
+    <div class="card"><div class="k">経路 3</div><div class="big">DeepSeek<br>Harness</div><div class="sub">自社の開発ツールを<br>無償公開</div></div>
+  </div>
+  <div class="thesis">焦点：<span class="accent">高価格モデルの利用をどこまで置き換えるか</span></div>
+</section>
+
+<section class="slide" aria-label="3ページ目 企業利用の壁">
+  <div class="eyebrow">企業利用</div>
+  <h1>ただし企業には<span class="accent">2つの壁</span></h1>
+  <div class="cards c2">
+    <div class="card"><div class="k">API利用</div><div class="big">情報保護</div><div class="sub">中国企業のAPIは使いづらい。<br>OpenAIのAPIや、Copilot・<br>Gemini Enterpriseが選ばれる</div></div>
+    <div class="card"><div class="k">自社運用</div><div class="big">動く ≠ 使える</div><div class="sub">安い機材でも推論はできる。<br>だが同時利用数と速度が<br>足りない</div></div>
+  </div>
+  <div class="thesis cost"><div>大企業なら今でも可能。<br>一般企業に広がるのは、モデルの<br>サイズが<span class="accent">今の約1/6</span>になってから</div><div class="cost-flow"><div><div class="ck">今（大企業）</div><div class="cv">GPU8枚</div><div class="cp">約2,000万〜3,000万円</div></div><div class="arrow">→</div><div><div class="ck">約1/6なら</div><div class="cv accent">GPU1枚</div><div class="cp">約400万円</div></div></div></div>
+</section>
+
+<section class="slide" aria-label="4ページ目 結論">
+  <div class="eyebrow">結論</div>
+  <div class="closing">
+    <p>短期は<span class="accent">開発者と安価なAgent用途</span>で広がる。</p>
+    <p>企業市場は当面、<span class="accent">OpenAI・Microsoft・Google</span>の囲い込みが守る。</p>
+  </div>
+</section>
+</main>
+<div class="controls"><button id="prev" aria-label="前のページ">← 前へ</button><span class="counter" id="counter">1 / 4</span><button id="next" aria-label="次のページ">次へ →</button><button id="sourceBtn" aria-expanded="false">出典</button></div>
+<aside class="sources" id="sources" aria-label="出典">
+<h2>出典・前提</h2>
+<div class="head">1ページ目</div>
+<p><a target="_blank" rel="noopener" href="https://api-docs.deepseek.com/news/news261017/">DeepSeek：10月17日の公式発表</a>／<a target="_blank" rel="noopener" href="https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017">モデルカード</a>　DeepSeek公表値。DeepSWE v1.1は77.0（Opus 5は74.0）、Terminal-Bench 4.0は42.3（同51.8）と指標により勝ち負け。比較対象は前世代のOpus 5で、Opus 5.5（<a target="_blank" rel="noopener" href="https://technews.tw/2026/09/23/anthropic-upgrades-claude-with-new-opus-5-5-model/">2026年9月22日公開</a>）とは未比較。ライセンスはMIT。</p>
+<p><a target="_blank" rel="noopener" href="https://api-docs.deepseek.com/quick_start/pricing/">DeepSeek料金</a>・<a target="_blank" rel="noopener" href="https://platform.claude.com/docs/en/about-claude/pricing">Anthropic料金</a>　100万tokensあたり入力$0.30 vs $4（1/13）、出力$1.20 vs $20（1/17）。DeepSeekはピーク時料金（オフピークは半額）。性能差は考慮していない。</p>
+<div class="head">2ページ目</div>
+<p>経路1：公式発表で「Tencent CodeBuddy・WorkBuddy等に最適化」と記載。<a target="_blank" rel="noopener" href="https://upgrade.xiaoheiwan.com/aihot/xgj246drlw70qbgypibz6atla">WorkBuddy公式Xの転載</a>によれば1017版を10月31日まで無料提供。</p>
+<p>経路2：<a target="_blank" rel="noopener" href="https://api-docs.deepseek.com/guides/claude_code">DeepSeek：Claude Code連携ガイド</a>。Anthropic API・Responses API互換。Claude Code・Codex経由のSearch/Fetch APIは10月31日まで無料。</p>
+<p>経路3：<a target="_blank" rel="noopener" href="https://pasqualepillitteri.it/en/news/11027/deepseek-harness-mit-claude-code-rival">DeepSeek Harness</a>　2026年8月13日にMITライセンスで公開（開発者プレビュー）。</p>
+<div class="head">3ページ目</div>
+<p>API利用：<a target="_blank" rel="noopener" href="https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html">DeepSeekプライバシーポリシー</a>（2026年2月10日更新）に収集情報を中国国内のサーバーに保存と記載。</p>
+<p>自社運用：<a target="_blank" rel="noopener" href="https://github.com/FlashML-org/FreeToken/pull/460">FreeToken</a>・<a target="_blank" rel="noopener" href="https://github.com/JigSawPT/deepseek-v41-flash-on-5090">JigSawPT</a>　旧V4.1を32GB GPU＋大容量RAM・SSDで推論。生成速度は約5 tokens/秒。</p>
+<p>約1/6の根拠：<a target="_blank" rel="noopener" href="https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017/tree/main">重み約510GB</a>。<a target="_blank" rel="noopener" href="https://www.pc-koubou.jp/products/detail.php?product_id=1174583">96GB GPU搭載ワークステーション</a>（3,898,000円〜）に作業領域を残して収まる約80GBを目安とした試算。4bitに圧縮しても約280GBで届かない。モデルがGPUに収まらずRAM・SSDに置くことが、速度と同時利用数が伸びない原因。</p>
+<p>金額の根拠：今の約510GBをGPUメモリに載せるには96GB GPUが最低6枚、並列処理の構成と同時利用の作業領域を考えると実質8枚。RTX PRO 6000 Blackwell Server Edition（96GB）は1枚あたり税込約219万円（<a target="_blank" rel="noopener" href="https://gdep-sol.co.jp/gpu-products/nvidia-gpu/nvidia-rtx-pro-6000-blackwell/">gdep-sol参考価格</a>）〜約330万円（<a target="_blank" rel="noopener" href="https://www.gdep.co.jp/products/list/v/68a80ddee63d2/">GDEP一般価格</a>）で、8枚でGPUだけで約1,750万〜2,640万円。サーバー本体を加えて約2,000万〜3,000万円と概算（見積もりではない）。目安の約400万円は、同GPU1枚搭載のワークステーション（パソコン工房、3,898,000円〜）。</p>
+<div class="head">4ページ目</div>
+<p>1〜3ページ目を踏まえた見解。企業の採用実績や将来を保証・予測するものではない。</p>
+</aside>
+<script>
+(()=>{const stage=document.getElementById('stage'),slides=Array.from(document.querySelectorAll('.slide')),counter=document.getElementById('counter'),sources=document.getElementById('sources'),sbtn=document.getElementById('sourceBtn');let cur=0;
+function fit(){const s=Math.min(window.innerWidth/1280,(window.innerHeight-52)/720,1.4);stage.style.transform='scale('+s+')';}
+function go(n){cur=Math.max(0,Math.min(slides.length-1,n));slides.forEach((s,i)=>s.classList.toggle('active',i===cur));counter.textContent=(cur+1)+' / '+slides.length;}
+document.getElementById('prev').addEventListener('click',()=>go(cur-1));document.getElementById('next').addEventListener('click',()=>go(cur+1));sbtn.addEventListener('click',()=>{sources.classList.toggle('open');sbtn.setAttribute('aria-expanded',sources.classList.contains('open'))});window.addEventListener('keydown',e=>{if(e.key==='Escape')sources.classList.remove('open');if(sources.classList.contains('open'))return;if(e.key==='ArrowRight'||e.key==='PageDown'||e.key===' ')go(cur+1);if(e.key==='ArrowLeft'||e.key==='PageUp')go(cur-1);});window.addEventListener('resize',fit);fit();go(0);})();
+</script>
+</body></html>
